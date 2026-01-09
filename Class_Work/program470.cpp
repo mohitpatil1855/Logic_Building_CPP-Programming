@@ -1,0 +1,31 @@
+// Program 108.java   OOP Concepts
+
+#include <iostream>
+using namespace std;
+
+class ArrayX
+{
+public:
+    int *Arr; // int Arr[];          //Error Not Allowed
+    int iSize;
+
+    ArrayX(int no)
+    {
+        cout << "Inside Constructor..!\n";
+        iSize = no;
+        Arr = new int[iSize];
+    }
+
+    ~ArrayX()
+    {
+        cout << "Inside Destructor..! \n";
+        delete[] Arr;
+    }
+};
+
+int main()
+{
+    ArrayX aobj(10);
+
+    return 0;
+}
